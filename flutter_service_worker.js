@@ -33,9 +33,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "a6fd18ddc579590009e31b64f3603d19",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "5a3459eb25d376f4a14161fa1e993bb1",
-"/": "5a3459eb25d376f4a14161fa1e993bb1",
-"main.dart.js": "3bc2ac5ef59cc60a7bfce42d086de2ed",
+"index.html": "4b16e34f3c8ccd7337527223e907bceb",
+"/": "4b16e34f3c8ccd7337527223e907bceb",
+"main.dart.js": "26d1cc118ef2a6555a2be7c84db23e41",
 "manifest.json": "1ac927b562d7625aa65d1f36f0e0ef73",
 "version.json": "7e16d4ebb19a0059b34f89f12465db4f"
 };
@@ -209,14 +209,3 @@ function onlineFirst(event) {
     })
   );
 }
-
-function forceSWupdate() {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then(function (registrations) {
-      for (let registration of registrations) {
-        registration.update()
-      }
-    })
-  }
-}
-forceSWupdate()
